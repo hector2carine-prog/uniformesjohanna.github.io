@@ -493,6 +493,31 @@
   .price-value.lenka-price { color: var(--navy); }
   .price-value.frei-price { color: var(--green); }
 
+  .price-value-wrap {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    transition: all 0.3s;
+  }
+
+  .price-original {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--gray);
+    text-decoration: line-through;
+  }
+
+  .discount-flag {
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 0.68rem;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 6px;
+    margin-left: 4px;
+    letter-spacing: 0.5px;
+  }
+
   .wsp-btn {
     display: block;
     width: 100%;
@@ -729,6 +754,7 @@
   <ul class="nav-links">
     <li><a href="#nosotros">Nosotros</a></li>
     <li><a href="#colegios">Colegios</a></li>
+    <li><a href="#institucional">Institucional</a></li>
     <li><a href="#info">Horarios</a></li>
     <li><a href="#ubicacion">Ubicación</a></li>
     <li><a href="https://wa.me/56993770820" target="_blank">WhatsApp</a></li>
@@ -785,7 +811,7 @@
     <div class="info-item">
       <div class="icon">📍</div>
       <h3>Ñuñoa</h3>
-      <p>Ramón Cruz Montt 1569, Ñuñoa · También kiosco en Colegio Siria</p>
+      <p>Ramón Cruz Montt 1569, Ñuñoa</p>
     </div>
   </div>
 </div>
@@ -910,7 +936,7 @@
       <img src="data:image/png;base64,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" alt="Colegio República de Siria">
       <div>
         <h2>COLEGIO REPÚBLICA DE SIRIA</h2>
-        <p>Uniformes oficiales · Kiosco disponible en el patio central del colegio</p>
+        <p>Uniformes oficiales</p>
       </div>
     </div>
     <div class="product-grid" id="grid-siria"></div>
@@ -937,7 +963,46 @@
         <p>Uniformes oficiales · Colores verde y dorado</p>
       </div>
     </div>
+    <div style="background:linear-gradient(135deg, #1a4d28, #2e8b4a); border-radius:14px; padding:16px 22px; margin-bottom:28px; color:white; box-shadow:var(--card-shadow);">
+      <div style="font-family:'Bebas Neue',sans-serif; letter-spacing:1px; font-size:1.1rem; color:var(--gold);">50% de descuento</div>
+      <div style="font-size:0.9rem; opacity:0.92; font-weight:600;">Todo el uniforme del Colegio Eduardo Frei Montalva tiene un 50% de descuento.</div>
+    </div>
     <div class="product-grid" id="grid-frei"></div>
+  </div>
+</section>
+
+<!-- INSTITUCIONAL / CONFECCIONES EN CANTIDAD -->
+<section id="institucional" style="background:#f7f8fc;">
+  <div class="section-tag">Nueva opción</div>
+  <div class="section-title">CONFECCIONES INSTITUCIONALES PERSONALIZADAS</div>
+  <div style="
+    background: linear-gradient(135deg, #1a1f5e 0%, #c0392b 100%);
+    border-radius: 28px;
+    padding: 44px 40px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  ">
+    <div style="position:absolute;top:-40px;right:-40px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,0.06);"></div>
+    <div style="position:relative; display:grid; grid-template-columns:1.3fr 1fr; gap:36px; align-items:center;">
+      <div>
+        <p style="font-size:1.05rem; line-height:1.8; font-weight:600; margin-bottom:20px;">
+          Confeccionamos uniformes y ropa institucional a pedido, personalizada y por cantidad,
+          para empresas, clubes deportivos, academias, jardines infantiles y eventos. Bordado con tu logo,
+          tallas mixtas y precios especiales por volumen.
+        </p>
+        <ul style="list-style:none; display:grid; gap:12px; margin-bottom:28px;">
+          <li style="font-weight:700; font-size:0.95rem;">Producción a pedido en la cantidad que necesites</li>
+          <li style="font-weight:700; font-size:0.95rem;">Bordado con tu logo institucional</li>
+          <li style="font-weight:700; font-size:0.95rem;">Precios preferenciales por volumen</li>
+        </ul>
+        <a href="https://wa.me/56993770820?text=Hola!%20Quiero%20cotizar%20confecciones%20institucionales%20personalizadas%20en%20cantidad" target="_blank" class="btn-whatsapp" style="display:inline-flex;">Cotizar por WhatsApp</a>
+      </div>
+      <div style="background:rgba(255,255,255,0.1); border-radius:20px; padding:28px; text-align:center;">
+        <div style="font-family:'Bebas Neue',sans-serif; font-size:1.6rem; letter-spacing:1px; color:var(--gold);">CANTIDAD Y CALIDAD</div>
+        <div style="font-size:0.85rem; opacity:0.85; font-weight:600; margin-top:8px;">Ideal para empresas, clubes, colegios y eventos</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -946,7 +1011,7 @@
   <div class="map-section">
     <div class="map-header">
       <h2>📍 ENCUÉNTRANOS</h2>
-      <p>Ramón Cruz Montt 1569, Ñuñoa, Santiago · También tenemos kiosco en Colegio República de Siria</p>
+      <p>Ramón Cruz Montt 1569, Ñuñoa, Santiago</p>
     </div>
     <div class="map-body">
       <div class="map-embed">
@@ -970,13 +1035,6 @@
           <div>
             <h4>Horario de atención</h4>
             <p>Lunes a Viernes: 10:00 – 19:00 hrs<br>Sábado y Domingo: previa coordinación</p>
-          </div>
-        </div>
-        <div class="map-info-item">
-          <div class="map-info-icon">🏫</div>
-          <div>
-            <h4>Kiosco en colegio</h4>
-            <p>También encontranos en el<br>patio central del Colegio República de Siria</p>
           </div>
         </div>
         <a href="https://wa.me/56993770820" target="_blank" class="map-wsp">
@@ -1018,6 +1076,11 @@ const LENKA_PRICES = {
 function getPrice(school, product, size) {
   const table = school === 'lenka' ? LENKA_PRICES : PRICES;
   return (table[product] && table[product][size]) || (PRICES[product] && PRICES[product][size]);
+}
+
+const FREI_DISCOUNT = 0.5;
+function getFinalPrice(school, price) {
+  return (school === 'frei' && price) ? Math.round(price * (1 - FREI_DISCOUNT)) : price;
 }
 
 const SCHOOL_PRODUCTS = {
@@ -1069,7 +1132,8 @@ function buildGrid(school) {
   grid.innerHTML = products.map(p => {
     const defaultSize = p.sizes[2] || p.sizes[0];
     const defaultPrice = getPrice(school, p.key, defaultSize) || Object.values((school === 'lenka' ? LENKA_PRICES : PRICES)[p.key] || PRICES[p.key])[0];
-    const sizeButtons = p.sizes.map((s, i) => 
+    const finalPrice = getFinalPrice(school, defaultPrice);
+    const sizeButtons = p.sizes.map((s, i) =>
       `<button class="size-btn ${i === 2 ? 'selected' : ''}" onclick="selectSize(this,'${school}','${p.key}','${s}')">${s}</button>`
     ).join('');
     const msgText = encodeURIComponent(`Hola! Quiero consultar por ${p.name} talla ${defaultSize} para ${school === 'siria' ? 'Colegio República de Siria' : school === 'lenka' ? 'Liceo Lenka Franulic' : 'Colegio Eduardo Frei Montalva'}`);
@@ -1086,8 +1150,8 @@ function buildGrid(school) {
           <div class="sizes">${sizeButtons}</div>
         </div>
         <div class="price-display">
-          <span class="price-label">Precio</span>
-          <span class="price-value ${colorClass}" id="price-${school}-${p.key}">${formatPrice(defaultPrice)}</span>
+          <span class="price-label">Precio${school === 'frei' ? ' <span class="discount-flag">-50%</span>' : ''}</span>
+          <span class="price-value-wrap" id="price-${school}-${p.key}">${school === 'frei' ? `<span class="price-original">${formatPrice(defaultPrice)}</span>` : ''}<span class="price-value ${colorClass}">${formatPrice(finalPrice)}</span></span>
         </div>
         <a href="https://wa.me/56993770820?text=${msgText}" target="_blank" class="wsp-btn" id="wsp-${school}-${p.key}">
           💬 Consultar por WhatsApp
@@ -1104,13 +1168,16 @@ function selectSize(btn, school, product, size) {
   btn.classList.add('selected');
 
   const price = getPrice(school, product, size);
+  const finalPrice = getFinalPrice(school, price);
   const priceEl = document.getElementById('price-' + school + '-' + product);
+  const colorClass = SCHOOL_COLOR_CLASS[school];
   if (price) {
-    priceEl.textContent = formatPrice(price);
+    priceEl.innerHTML = (school === 'frei' ? `<span class="price-original">${formatPrice(price)}</span>` : '') +
+      `<span class="price-value ${colorClass}">${formatPrice(finalPrice)}</span>`;
     priceEl.style.transform = 'scale(1.15)';
     setTimeout(() => priceEl.style.transform = 'scale(1)', 250);
   } else {
-    priceEl.textContent = 'Consultar';
+    priceEl.innerHTML = 'Consultar';
   }
 
   const schoolName = school === 'siria' ? 'Colegio República de Siria' : school === 'lenka' ? 'Liceo Lenka Franulic' : 'Colegio Eduardo Frei Montalva';
