@@ -965,7 +965,7 @@
     </div>
     <div style="background:linear-gradient(135deg, #1a4d28, #2e8b4a); border-radius:14px; padding:16px 22px; margin-bottom:28px; color:white; box-shadow:var(--card-shadow);">
       <div style="font-family:'Bebas Neue',sans-serif; letter-spacing:1px; font-size:1.1rem; color:var(--gold);">50% de descuento</div>
-      <div style="font-size:0.9rem; opacity:0.92; font-weight:600;">Todo el uniforme del Colegio Eduardo Frei Montalva tiene un 50% de descuento.</div>
+      <div style="font-size:0.9rem; opacity:0.92; font-weight:600;">Todo el uniforme del Colegio Eduardo Frei Montalva tiene un 50% de descuento, válido para todo el modelo 2026 (polera blanca y buzo franela fantasía).</div>
     </div>
     <div class="product-grid" id="grid-frei"></div>
   </div>
@@ -1104,12 +1104,11 @@ const SCHOOL_PRODUCTS = {
     { key: 'jockey', name: 'Jockey', desc: 'Accesorio oficial', icon: '🧢', sizes: ['Única'] },
   ],
   frei: [
-    { key: 'buzo', name: 'Buzo Completo', desc: 'Pantalón y Polerón', icon: '🏃', sizes: ['4-6-8','10-12','14-16','S-M','L-XL','XXL'] },
-    { key: 'pantalon', name: 'Pantalón de Buzo', desc: 'Pantalón deportivo', icon: '👖', sizes: ['4-6-8','10-12','14-16','S-M','L-XL','XXL'] },
-    { key: 'poleron', name: 'Polerón', desc: 'Canguro o Cierre', icon: '🧥', sizes: ['4-6-8','10-12','14-16','S-M','L-XL','XXL'] },
-    { key: 'pique', name: 'Polera Piqué', desc: 'Uniforme escolar', icon: '👕', sizes: ['4-6-8','10-12','14-16','S-M','L-XL','XXL'] },
-    { key: 'gimnasia', name: 'Polera Gimnasia', desc: 'Educación física', icon: '⚽', sizes: ['4-6-8','10-12','14-16','S-M','L-XL','XXL'] },
-    { key: 'falda', name: 'Falda', desc: 'Uniforme femenino', icon: '👗', sizes: ['12-14','16-38','40-42','44-46','48-50'] },
+    { key: 'buzo', name: 'Buzo Completo Franela Fantasía', desc: 'Pantalón y Polerón del Buzo', icon: '', sizes: ['4-6-8','10-12','14-16','S-M','L-XL','XXL'] },
+    { key: 'pantalon', name: 'Pantalón de Buzo Franela Fantasía', desc: 'Pantalón deportivo', icon: '', sizes: ['4-6-8','10-12','14-16','S-M','L-XL','XXL'] },
+    { key: 'poleron', name: 'Polerón Franela Fantasía', desc: 'Canguro o Cierre', icon: '', sizes: ['4-6-8','10-12','14-16','S-M','L-XL','XXL'] },
+    { key: 'pique', name: 'Polera Piqué Blanca', desc: 'Uniforme escolar', icon: '', sizes: ['4-6-8','10-12','14-16','S-M','L-XL','XXL'] },
+    { key: 'gimnasia', name: 'Polera de Gimnasia Blanca', desc: 'Educación física', icon: '', sizes: ['4-6-8','10-12','14-16','S-M','L-XL','XXL'] },
   ]
 };
 
@@ -1140,7 +1139,7 @@ function buildGrid(school) {
     return `
     <div class="product-card" id="card-${school}-${p.key}">
       <div class="product-card-top">
-        <div class="product-icon" style="${SCHOOL_BG[school]}">${p.icon}</div>
+        ${p.icon ? `<div class="product-icon" style="${SCHOOL_BG[school]}">${p.icon}</div>` : ''}
         <div class="product-name">${p.name}</div>
         <div class="product-desc">${p.desc}</div>
       </div>
